@@ -8,4 +8,10 @@ describe('<App />', () => {
 
     expect(comp.container.childElementCount).toBeGreaterThan(0);
   });
+
+  it('should render the logo', () => {
+    const { queryByText } = render(<App />);
+
+    expect(queryByText('Weather Challenge')).not.toBeNull();
+  });
 });

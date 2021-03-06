@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  console.log('A simple log');
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <main className="App-main">
+        <header className="App-header">
+          <h1 className="App-logo">Weather Challenge</h1>
+        </header>
+      </main>
     </div>
   );
 }
