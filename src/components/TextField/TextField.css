@@ -1,0 +1,15 @@
+.TextField {
+  background: #f6f9f7;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(43, 30, 30, 0.25);
+  font-size: 1rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+.TextField::placeholder {
+  color: #ccc4c4;
+}
