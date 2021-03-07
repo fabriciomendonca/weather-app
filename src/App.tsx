@@ -78,6 +78,143 @@ function App() {
               </div>
             </div>
           </div>
+          <div className="App-upcoming-days">
+            <h2>Upcoming days</h2>
+            <div className="App-upcomming-days-list">
+              <ul className="App-next-days">
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">34º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+              </ul>
+              <ul className="App-next-days">
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">34º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+                <li>
+                  <span className="App-next-day">
+                    <Icon name={IconNames.SUNNY} />
+                    <span>Tuesday</span>
+                  </span>
+                  <span className="App-next-day-date-temperature">
+                    <span className="App-next-day-date">02.03.2021</span>
+                    <span className="App-next-day-temperature">4º</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className="App-upcoming-days-nav">
+              <button type="button" className="IconButton" disabled>
+                <Icon name={IconNames.DIRECTION_LEFT} />
+              </button>
+              <button type="button" className="IconButton">
+                <Icon name={IconNames.DIRECTION_RIGHT} />
+              </button>
+            </div>
+          </div>
         </section>
       </main>
     </div>

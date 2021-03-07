@@ -32,7 +32,7 @@
 .App-now {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 1.25rem auto;
   max-width: 320px;
   padding-top: 4.25rem;
 }
@@ -66,4 +66,90 @@
 .App-now-icon {
   height: 40px;
   width: 40px;
+}
+
+.App-upcoming-days {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: calc(640px + 3.75rem);
+}
+
+.App-upcoming-days h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.App-upcomming-days-list {
+  display: flex;
+  margin: 0 auto;
+}
+
+.App-next-days {
+  flex-shrink: 0;
+  list-style: none;
+  margin-right: 3.75rem;
+  max-width: 320px;
+  min-width: calc(320px - 2rem);
+  width: 100%;
+}
+
+.App-next-days li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  line-height: 2.5rem;
+}
+
+.App-next-day {
+  align-items: center;
+  display: flex;
+}
+
+.App-next-day-date-temperature {
+  align-items: center;
+  display: flex;
+}
+
+.App-next-day-date {
+  font-size: 0.875rem;
+}
+
+.App-next-day-temperature {
+  margin-left: 0.5rem;
+  text-align: right;
+  width: 1.75rem;
+}
+
+.App-upcoming-days-nav {
+  display: none;
+}
+
+.IconButton {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.IconButton:disabled {
+  cursor: default;
+  opacity: 0.25;
+}
+
+/** MOBILE **/
+@media screen and (max-width: 767px) {
+  .App-upcoming-days {
+    max-width: 320px;
+  }
+
+  .App-upcomming-days-list {
+    max-width: 320px;
+    overflow: hidden;
+  }
+
+  .App-upcoming-days-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
