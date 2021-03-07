@@ -1,0 +1,10 @@
+.Icon {
+  display: flex;
+  height: 40px;
+  width: 40px;
+}
+
+.Icon-big {
+  height: 80px;
+  width: 80px;
+}

@@ -2,6 +2,8 @@ import * as React from 'react';
 import './App.css';
 import { Logo } from './components/Logo';
 import { Autocomplete, AutocompleteItem } from './components/Autocomplete';
+import { Icon } from './components/Icon';
+import { IconNames } from './components/Icon/IconFiles';
 
 interface City {
   id: string;
@@ -71,7 +73,9 @@ function App() {
                 <p>18º</p>
                 <small>01.03.2001</small>
               </div>
-              <div className="App-now-icon"></div>
+              <div className="App-now-icon">
+                <Icon name={IconNames.SUNNY} />
+              </div>
             </div>
           </div>
         </section>
