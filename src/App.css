@@ -18,3 +18,52 @@
   display: flex;
   height: 3.75rem;
 }
+
+.App-content {
+  position: relative;
+  width: 100%;
+}
+
+.App-search {
+  position: absolute;
+  width: 100%;
+}
+
+.App-now {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 320px;
+  padding-top: 4.25rem;
+}
+
+.App-now h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.App-now-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.App-now-temperature {
+  display: flex;
+  flex-direction: column;
+}
+
+.App-now-temperature p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.App-now-temperature small {
+  font-size: 1rem;
+}
+
+.App-now-icon {
+  background: red;
+  height: 40px;
+  width: 40px;
+}

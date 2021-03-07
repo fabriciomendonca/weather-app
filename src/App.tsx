@@ -64,6 +64,16 @@ function App() {
               onItemSelected={onCitySelected}
             />
           </div>
+          <div className="App-now">
+            <h2>Now</h2>
+            <div className="App-now-info">
+              <div className="App-now-temperature">
+                <p>18º</p>
+                <small>01.03.2001</small>
+              </div>
+              <div className="App-now-icon"></div>
+            </div>
+          </div>
         </section>
       </main>
     </div>
