@@ -17,6 +17,7 @@
   list-style: none;
   max-height: 164px;
   padding: 1rem 0;
+  overflow-y: auto;
 }
 
 .Autocomplete-result-list li {
