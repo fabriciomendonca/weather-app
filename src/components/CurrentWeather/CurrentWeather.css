@@ -31,3 +31,10 @@
 .CurrentWeather-temperature small {
   font-size: 1rem;
 }
+
+/** MOBILE **/
+@media screen and (max-width: 767px) {
+  .CurrentWeather {
+    max-width: 288px;
+  }
+}

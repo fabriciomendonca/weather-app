@@ -1,9 +1,8 @@
 .UpcomingDaysList {
-  flex-shrink: 0;
   list-style: none;
   margin-right: 3.75rem;
   max-width: 320px;
-  min-width: calc(320px - 2rem);
+  min-width: 288px;
   width: 100%;
 }
 

@@ -19,11 +19,15 @@
 /** MOBILE **/
 @media screen and (max-width: 767px) {
   .UpcomingDays {
-    max-width: 320px;
+    max-width: 288px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
   }
 
   .UpcomingDays-blocks {
-    max-width: 320px;
-    overflow: hidden;
+    position: relative;
+    left: 0;
+    transition: left 300ms ease-out;
   }
 }
