@@ -1,0 +1,11 @@
+.UpcomingDaysNav {
+  display: none;
+}
+
+/** MOBILE **/
+@media screen and (max-width: 767px) {
+  .UpcomingDaysNav {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

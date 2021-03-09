@@ -1,0 +1,19 @@
+.NextDay {
+  align-items: center;
+  display: flex;
+}
+
+.NextDay-info {
+  align-items: center;
+  display: flex;
+}
+
+.NextDay-date {
+  font-size: 0.875rem;
+}
+
+.NextDay-temperature {
+  margin-left: 0.5rem;
+  text-align: right;
+  width: 1.75rem;
+}

@@ -1,0 +1,29 @@
+.UpcomingDays {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: calc(640px + 3.75rem);
+}
+
+.UpcomingDays h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.UpcomingDays-blocks {
+  display: flex;
+  margin: 0 auto;
+}
+
+/** MOBILE **/
+@media screen and (max-width: 767px) {
+  .UpcomingDays {
+    max-width: 320px;
+  }
+
+  .UpcomingDays-blocks {
+    max-width: 320px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,33 @@
+.CurrentWeather {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 1.25rem auto;
+  max-width: 320px;
+  padding-top: 4.25rem;
+}
+
+.CurrentWeather h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.CurrentWeather-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CurrentWeather-temperature {
+  display: flex;
+  flex-direction: column;
+}
+
+.CurrentWeather-temperature p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.CurrentWeather-temperature small {
+  font-size: 1rem;
+}

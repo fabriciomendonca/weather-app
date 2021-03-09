@@ -1,0 +1,10 @@
+.IconButton {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.IconButton:disabled {
+  cursor: default;
+  opacity: 0.25;
+}
