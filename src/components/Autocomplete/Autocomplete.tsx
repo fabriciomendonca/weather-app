@@ -37,11 +37,7 @@ export function Autocomplete({
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
     setInputValue(query);
-    if (query.length >= 3) {
-      searchFunction(query);
-    } else {
-      setList([]);
-    }
+    searchFunction(query);
   };
 
   const onItemClick = (item: AutocompleteItem) => {
