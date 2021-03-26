@@ -9,7 +9,6 @@ export const useGetCitites = (query?: string): City[] => {
   const [cities, setCities] = React.useState<City[]>([]);
 
   React.useEffect(() => {
-    console.log(query);
     if (!query || query.length < 3) {
       return;
     }
@@ -26,5 +25,3 @@ export const useGetCitites = (query?: string): City[] => {
 
   return cities;
 };
-
-export default useGetCitites;

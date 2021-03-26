@@ -7,5 +7,3 @@ export const WEEK_DAYS = [
   'Friday',
   'Saturday',
 ];
-
-export default {};

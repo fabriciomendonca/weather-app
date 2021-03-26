@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['prettier'],
+  extends: ['prettier', 'react-app'],
   plugins: ['jest'],
   env: {
     'jest/globals': true,

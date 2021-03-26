@@ -1,27 +1,19 @@
+import { ForecastDay } from '../../../business-rules/forecast/data';
 import { NextDay } from '../NextDay';
 import './UpcomingDaysList.css';
 
-export function UpcomingDaysList() {
+interface Props {
+  days: ForecastDay[];
+}
+
+export function UpcomingDaysList({ days }: Props) {
   return (
     <ul className="UpcomingDaysList">
-      <li>
-        <NextDay />
-      </li>
-      <li>
-        <NextDay />
-      </li>
-      <li>
-        <NextDay />
-      </li>
-      <li>
-        <NextDay />
-      </li>
-      <li>
-        <NextDay />
-      </li>
-      <li>
-        <NextDay />
-      </li>
+      {days.map((day, index) => (
+        <li key={`day-${index}`}>
+          <NextDay day={day} />
+        </li>
+      ))}
     </ul>
   );
 }

@@ -11,7 +11,7 @@ export interface AutocompleteItem {
 interface AutocompleteProps {
   items: AutocompleteItem[];
   searchFunction: (query: string) => void;
-  onItemSelected: (item: AutocompleteItem) => void;
+  onItemSelected: (item: AutocompleteItem & unknown) => void;
 }
 
 export function Autocomplete({
@@ -36,6 +36,7 @@ export function Autocomplete({
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
+
     setInputValue(query);
     searchFunction(query);
   };
