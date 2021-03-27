@@ -4,7 +4,9 @@ import service from '../business-rules/forecast/content-provider';
 import exposer from '../business-rules/forecast/exposer';
 import { Forecast } from '../business-rules/forecast/data';
 
-export const useGetForecast = (city: City | undefined): Forecast | null => {
+export const useGetForecast = (
+  city: City | undefined
+): { forecast: Forecast | null } => {
   const [forecast, setForecast] = useState<Forecast | null>(null);
 
   useEffect(() => {
@@ -24,5 +26,5 @@ export const useGetForecast = (city: City | undefined): Forecast | null => {
     getForecast();
   }, [city]);
 
-  return forecast;
+  return { forecast };
 };

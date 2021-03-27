@@ -7,24 +7,67 @@ import { UpcomingDays } from './components/UpcomingDays';
 import { useGetCitites } from './hooks/cityHooks';
 import { useGetForecast } from './hooks/forecastHooks';
 import { City } from './business-rules/city/data';
+import { getThemeNameByTemperature, THEME_NAMES } from './utils/theme';
+
+const AppMain: React.FC<{ theme: string }> = ({ children, theme }) => {
+  return <div className="App-main">{children}</div>;
+};
 
 function App() {
   const [query, setQuery] = React.useState('');
   const [selectedCity, setSelectedCity] = React.useState<City>();
+  const [theme, setTheme] = React.useState(THEME_NAMES.INITIAL);
   const cities = useGetCitites(query);
-  const forecast = useGetForecast(selectedCity);
+  const { forecast } = useGetForecast(selectedCity);
+  const [previousClass, setPreviousClass] = React.useState('');
+  const [bgClasses, setBgClasses] = React.useState('');
+  const [isAnimatingBg, setIsAnimatingBg] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
+
   const searchCities = (newQuery: string) => {
     setQuery(newQuery);
   };
 
+  React.useEffect(() => {
+    if (forecast && forecast.days[0].weather.temperatures.current) {
+      const themeName = getThemeNameByTemperature(
+        forecast.days[0].weather.temperatures.current.celsius
+      );
+
+      setIsLoading(false);
+      setIsAnimatingBg(true);
+      setBgClasses(`--${themeName}`);
+      setTheme(themeName);
+    }
+  }, [forecast]);
+
+  React.useEffect(() => {
+    if (isLoading) {
+      setPreviousClass(`--${theme}-loading`);
+    }
+  }, [isLoading, theme]);
+
+  const onTransitionEnd = React.useCallback(() => {
+    if (isAnimatingBg) {
+      setIsAnimatingBg(false);
+      setPreviousClass('');
+    }
+  }, [isAnimatingBg]);
+
   const onCitySelected = (city: AutocompleteItem & City) => {
     setSelectedCity(city);
     setQuery('');
+    setIsLoading(true);
   };
 
   return (
-    <div className="App">
-      <main className="App-main">
+    <div
+      className={`App ${previousClass} ${bgClasses} ${
+        isLoading ? '--loading' : ''
+      }`.trim()}
+      onTransitionEnd={() => (isAnimatingBg ? onTransitionEnd() : null)}
+    >
+      <AppMain theme={theme}>
         <header className="App-header">
           <Logo />
         </header>
@@ -51,7 +94,7 @@ function App() {
             <div>Loading forecast data</div>
           )}
         </section>
-      </main>
+      </AppMain>
     </div>
   );
 }

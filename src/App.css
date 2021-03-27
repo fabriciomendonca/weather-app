@@ -1,16 +1,99 @@
 .App {
-  background-image: linear-gradient(180deg, #ffffff 0%, #dfd27f 100%);
+  animation: animate-background 300ms ease-out;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
   width: 100vw;
+}
+
+.App::before {
+  background-image: linear-gradient(180deg, #ffffff 0%, #dfd27f 100%);
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.App.--freezing-loading::before {
+  background-image: linear-gradient(180deg, #46b8e9 0%, #dcfaf4 100%);
+}
+.App.--cold-loading::before {
+  background-image: linear-gradient(180deg, #b0e2f7 0%, #c0df7f 100%);
+}
+.App.--cool-loading::before {
+  background-image: linear-gradient(180deg, #b0f7dc 0%, #dfd27f 100%);
+}
+.App.--warm-loading::before {
+  background-image: linear-gradient(180deg, #f7bfb0 0%, #dfd27f 100%);
+}
+.App.--hot-loadingt::before {
+  background-image: linear-gradient(180deg, #f39090 0%, #fbe65e 100%);
+}
+.App.--burning-loading::before {
+  background-image: linear-gradient(180deg, #f24545 0%, #fff84a 100%);
+}
+
+.App::after {
+  content: '';
+  display: block;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  transition: all 300ms ease-in;
+  width: 100%;
+  z-index: 2;
+}
+
+.App.--freezing::after {
+  background-image: linear-gradient(180deg, #46b8e9 0%, #dcfaf4 100%);
+  opacity: 1;
+}
+.App.--cold::after {
+  background-image: linear-gradient(180deg, #b0e2f7 0%, #c0df7f 100%);
+  opacity: 1;
+}
+.App.--cool::after {
+  background-image: linear-gradient(180deg, #b0f7dc 0%, #dfd27f 100%);
+  opacity: 1;
+}
+.App.--warm::after {
+  background-image: linear-gradient(180deg, #f7bfb0 0%, #dfd27f 100%);
+  opacity: 1;
+}
+.App.--hot::after {
+  background-image: linear-gradient(180deg, #f39090 0%, #fbe65e 100%);
+  opacity: 1;
+}
+.App.--burning::after {
+  background-image: linear-gradient(180deg, #f24545 0%, #fff84a 100%);
+  opacity: 1;
+}
+
+.App.--loading::after {
+  opacity: 0;
+  transition: none;
+}
+
+@keyframes animate-background {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .App-main {
   margin: 0 auto;
   max-width: 1024px;
   padding: 0 1rem;
+  position: relative;
   width: 100%;
+  z-index: 3;
 }
 
 .App-header {
