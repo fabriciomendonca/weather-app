@@ -3,7 +3,7 @@ import exposer from '../business-rules/city/exposer';
 import service from '../business-rules/city/content-provider';
 import { City } from '../business-rules/city/data';
 
-export const useGetCitites = (query?: string): City[] => {
+export const useGetCities = (query?: string): City[] => {
   exposer.setService(service);
 
   const [cities, setCities] = React.useState<City[]>([]);

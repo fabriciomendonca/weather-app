@@ -4,7 +4,7 @@ import { Logo } from './components/Logo';
 import { Autocomplete, AutocompleteItem } from './components/Autocomplete';
 import { CurrentWeather } from './components/CurrentWeather';
 import { UpcomingDays } from './components/UpcomingDays';
-import { useGetCitites } from './hooks/cityHooks';
+import { useGetCities } from './hooks/cityHooks';
 import { useGetForecast } from './hooks/forecastHooks';
 import { City } from './business-rules/city/data';
 import { getThemeNameByTemperature, THEME_NAMES } from './utils/theme';
@@ -17,7 +17,7 @@ function App() {
   const [query, setQuery] = React.useState('');
   const [selectedCity, setSelectedCity] = React.useState<City>();
   const [theme, setTheme] = React.useState(THEME_NAMES.INITIAL);
-  const cities = useGetCitites(query);
+  const cities = useGetCities(query);
   const { forecast } = useGetForecast(selectedCity);
   const [previousClass, setPreviousClass] = React.useState('');
   const [bgClasses, setBgClasses] = React.useState('');
@@ -74,7 +74,7 @@ function App() {
         <section className="App-content">
           <div className="App-search">
             <Autocomplete
-              items={cities.map(
+              items={(cities || []).map(
                 (c): AutocompleteItem => ({
                   ...c,
                   id: c.id || Date.now().toString(),

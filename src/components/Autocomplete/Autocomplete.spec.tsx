@@ -33,7 +33,7 @@ describe('<Autocomplete />', () => {
     expect(items.length).toBe(1);
   });
 
-  it('should call the searchFunction when the query has more than 3 chars', async () => {
+  it('should call the searchFunction', async () => {
     const spy = jest.fn();
     const comp = render(
       <Autocomplete
@@ -45,7 +45,7 @@ describe('<Autocomplete />', () => {
     const input = comp.getByTestId('text-field');
 
     await waitFor(() => fireEvent.change(input, { target: { value: 'Ne' } }));
-    expect(spy).not.toHaveBeenCalled();
+    expect(spy).toHaveBeenCalledWith('Ne');
     await waitFor(() =>
       fireEvent.change(input, { target: { value: 'New Yor' } })
     );
